@@ -18,3 +18,7 @@ services:
   test:
     <<: *base
     command: npm test
+
+  compile:
+    <<: *base
+    command: npm run compile

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cd $(dirname $0)/..
+
+docker-compose run --rm install
+docker-compose run --rm compile
+docker-compose -f compose.local.yaml build
+docker-compose -f compose.local.yaml up -d

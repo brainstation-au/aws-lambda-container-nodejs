@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  # curl -XPOST "http://localhost:9001/2015-03-31/functions/function/invocations" -d '{"a":2,"b":3}'
+  addition:
+    build: .
+    ports:
+      - '9001:8080'
+    command: dist/addition.handler
+
+  # curl -XPOST "http://localhost:9002/2015-03-31/functions/function/invocations" -d '{"a":5,"b":3}'
+  subtraction:
+    build: .
+    ports:
+      - '9002:8080'
+    command: dist/subtraction.handler
