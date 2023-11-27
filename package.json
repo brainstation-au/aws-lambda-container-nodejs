@@ -1,0 +1,36 @@
+{
+  "name": "aws-lambda-container-nodejs",
+  "version": "1.0.0",
+  "description": "Example of AWS Lambda with Container Image written in NodeJs",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "rm -rf dist && tsc -p tsconfig.app.json",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet",
+    "test": "jest --forceExit --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brainstation-au/aws-lambda-container-nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "aws-lambda"
+  ],
+  "author": "khalid@outlook.com.au",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/brainstation-au/aws-lambda-container-nodejs/issues"
+  },
+  "homepage": "https://github.com/brainstation-au/aws-lambda-container-nodejs#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.44.7",
+    "@types/jest": "^29.5.10",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  }
+}
